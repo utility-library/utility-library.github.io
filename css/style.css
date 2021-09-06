@@ -1,0 +1,174 @@
+/* Base */
+
+@font-face {
+	font-family: 'ChronicaPro';
+	src: url('../fonts/ChronicaPro-Heavy.otf')
+}
+
+html,* { cursor: none; }
+body{
+	background: url("../img/background.jpg");
+	background-size: 105% 105%;
+	margin: 0;
+}
+
+
+.center {
+	display: grid;
+	height: 100%;
+	width: 33%;
+	background-color: #252120;
+
+	box-shadow: 0px 0px 99px #0000000d;
+
+	animation: slide-in 0.9s cubic-bezier(0, 0.65, 0.37, 1);
+	animation-fill-mode: forwards;
+	transform: translateX(-100%);
+	
+	z-index: -3;
+}
+
+.title {
+	color: #FFFFFF;
+	font-family: "ChronicaPro";
+	
+	font-size: 10.5vw;
+	line-height: 5.9vw;
+	
+	align-self: center;
+	padding-top: 2.604vw;
+	padding-left: 3.1vw;
+
+	text-shadow: 0px 0px 56px #00000054;
+	
+	animation: slide-in 0.8s cubic-bezier(0, 0.65, 0.37, 1);
+	animation-fill-mode: forwards;
+	transform: translateX(-300%);
+	z-index: -3;
+	user-select: none;
+	margin: auto;
+}
+
+.nav {
+	user-select: none;
+	position: absolute;
+	display: grid;
+
+	color: #FFFFFF;
+	font-family: "Bahnschrift";
+	font-weight: lighter;
+	font-size: 0.938vw;
+
+	margin-top: 2.088vw;
+	margin-left: 3.125vw;
+
+	width: 39.323vw;
+	height: 3.531vw;
+
+	background-color: #322E2B;
+	border-radius: 8px;
+	align-items: center;
+	grid-template-columns: 8.594vw 4.167vw 8.854vw 5.208vw 0vw;
+
+	z-index: 1;
+	animation: slide-in-nav 1.1s cubic-bezier(0, 0.65, 0.37, 1);
+	animation-fill-mode: forwards;
+	transform: translateX(-100%) translateY(-50%) scale(0.8);
+}
+
+.navsep {
+	background-color: #616161b4;
+	width: 0.052vw;
+	height: 2.885vw;
+}
+
+.nav div {
+	margin-left: 3.385vw;
+}
+
+.documentation {
+	position:absolute;
+	bottom:20px;
+	left:20px;
+
+	display: flex;
+	width: 3.646vw;
+	height: 3.646vw;
+	border-radius: 50%;
+	background-color: #322E2B;
+	justify-content: center;
+	align-items: center;
+	color: #FFFFFF;
+	transition: 0.8s;
+	animation: grow 0.8s ease-in;
+}
+
+.documentation:hover {
+	color: #322E2B;
+	background-color: #0071FF;
+
+	width: 4.688vw;
+	height: 4.688vw;
+	transition: 0.5s;
+}
+
+.documentation i {
+	font-size: 1.563vw;
+}
+
+.transition {
+	position: absolute;
+
+	bottom: 0;
+	width: 100vw;
+	height: 0vw;
+	z-index: 2;
+}
+
+.blue {
+	background-color: #0071FF;
+}
+.black {
+	background-color: #322E2B;
+}
+
+.a1 {
+	animation: slide-transition 1.2s ease;
+	animation-fill-mode: forwards;
+}
+.b1 {
+	animation: slide-transition-out 1.2s ease-out;
+	animation-fill-mode: forwards;
+}
+.a2 {
+	animation: slide-transition 1.0s ease-in;
+	animation-fill-mode: forwards;
+}
+.b2 {
+	animation: slide-transition-out 1.0s ease;
+	animation-fill-mode: forwards;
+}
+
+
+@keyframes grow {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1.0);}
+}
+@keyframes slide-in {
+    0% { }
+    100% { transform: translateX(0%);}
+}
+
+@keyframes slide-in-nav {
+    0% { }
+    100% { transform: translateX(0%) translateY(0%) scale(1.0);}
+}
+
+@keyframes slide-transition {
+    0% { }
+    100% { height: 100vw;}
+}
+@keyframes slide-transition-out {
+    0% { height: 100vw; }
+    100% { height: 0vw;}
+}
